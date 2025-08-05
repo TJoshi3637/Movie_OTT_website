@@ -40,22 +40,27 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="pagination mt-8 flex justify-center items-center gap-4">
+      <div className="pagination">
         <button
           onClick={handlePrev}
           disabled={page === 1}
-          className="bg-gray-700 text-white px-4 py-2 rounded disabled:opacity-50"
+          className="pagination-button"
         >
           Prev
         </button>
-        <span className="text-white">Page {page}</span>
+
+        <span className="pagination-text">Page {page}</span>
+
         <button
           onClick={handleNext}
-          className="bg-gray-700 text-white px-4 py-2 rounded"
+          className="pagination-button"
         >
           Next
         </button>
       </div>
+
+
+
     </div>
   );
 };

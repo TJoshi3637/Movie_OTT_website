@@ -21,7 +21,7 @@ const MovieDetail = () => {
 
   return (
     <>
-      {/* ⬇ Main Container */}
+      
       <div className="movie-detail-container" style={{
         display: 'flex',
         gap: '2rem',
@@ -46,7 +46,7 @@ const MovieDetail = () => {
             <p><strong>Release Date:</strong> {movie.release_date}</p>
           </div>
 
-          {/* Overview inside the same container */}
+   
           <div style={{ marginTop: '1.5rem' }}>
             <h3 style={{ marginBottom: '0.5rem' }}>Overview</h3>
             <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>{movie.overview}</p>
@@ -54,7 +54,6 @@ const MovieDetail = () => {
         </div>
       </div>
 
-      {/* Cast Section */}
       <h2 style={{ textAlign: 'left', marginTop: '2rem', maxWidth: '1200px', margin: '2rem auto 0 auto', paddingLeft: '2rem' }}>Cast</h2>
       <div className="cast-grid" style={{
         display: 'grid',

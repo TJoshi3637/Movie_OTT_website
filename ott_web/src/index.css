@@ -1,85 +1,177 @@
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #0f0f0f;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
   color: white;
 }
 
+/* nav - part */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: #1a1a1a;
   align-items: center;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
 }
 
-.navbar .logo {
+.logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffcc00;
+  color: rgb(255, 255, 0);
   text-decoration: none;
-  margin-right: 4rem;
 }
 
-.navbar .links a {
-  margin-right: 1rem;
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: rgb(255, 255, 0);
 }
 
 .search-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-right: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .search-input {
-  padding: 0.5rem;
-  border-radius: 5px;
+  padding: 0.4rem 0.6rem;
   border: none;
-  font-size: 1rem;
-  background-color: #222;
-  color: white;
+  border-radius: 4px;
+  outline: none;
 }
 
 .search-button {
-  padding: 0.5rem 1rem;
-  background-color: #ffcc00;
+  padding: 0.4rem 0.8rem;
   border: none;
-  border-radius: 5px;
-  color: #1a1a1a;
-  font-weight: bold;
+  background-color: rgb(255, 255, 0);
+  color: black;
+  border-radius: 4px;
   cursor: pointer;
+  font-weight: 500;
   transition: background-color 0.3s ease;
 }
 
 .search-button:hover {
-  background-color: #e6b800;
+  background-color: #ffff66;
 }
 
-.links {
-  margin-left: 4rem; 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.links a:hover  {
-  color: #ffcc00;
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
 }
 
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: flex;
+  }
 
+  .nav-items {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1.5rem;
+  }
 
+  .nav-items.active {
+    display: flex;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 0 1rem;
+  }
+
+  .search-input,
+  .search-button {
+    width: 100%;
+  }
+}
+
+/* movie grid-part*/
 .container {
   padding: 1rem 2rem;
 }
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .movie-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .movie-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .movie-card {
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .movie-card:hover {
@@ -87,27 +179,26 @@ body {
   cursor: pointer;
 }
 
-
 .movie-card img {
   width: 100%;
   border-radius: 10px;
 }
 
 .movie-card h3 {
-  font-size: 1.1rem;         
-  font-weight: 600;          
+  font-size: 1.1rem;
+  font-weight: 600;
   color: white;
   text-align: center;
   margin-top: 0.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
   line-height: 1.4;
+  transition: color 0.3s ease;
 }
 
 .movie-card:hover h3 {
   color: yellow;
 }
 
+/* detail - part */
 .movie-detail-container {
   display: flex;
   flex-wrap: wrap;
@@ -115,10 +206,9 @@ body {
   border-radius: 10px;
   overflow: hidden;
   margin: 2rem auto;
-  max-width: 900px; 
+  max-width: 900px;
   padding: 1rem;
 }
-
 
 .movie-detail-left {
   flex: 1;
@@ -131,20 +221,10 @@ body {
 
 .detail-img {
   width: 100%;
-  max-width: 250px; 
+  max-width: 250px;
   border-radius: 10px;
   object-fit: cover;
 }
-
-.movie-title {
-  color: white !important;
-}
-
-.movie-card:hover .movie-title {
-  color: yellow !important;
-}
-
-
 
 .movie-info h2 {
   font-size: 1.5rem;
@@ -170,12 +250,14 @@ body {
   display: block;
   border-radius: 10px;
 }
+
 .movie-detail-right .overview {
   padding: 1rem;
   background-color: #2a2a2a;
   border-radius: 10px;
   margin-top: 1rem;
 }
+
 .movie-detail-right .overview h3 {
   margin-bottom: 0.5rem;
 }
@@ -185,14 +267,7 @@ body {
   line-height: 1.5;
 }
 
-
-
-
-.detail-img {
-  max-width: 300px;
-  border-radius: 10px;
-}
-
+/* cast grid-part */
 .cast-grid {
   display: flex;
   gap: 1rem;
@@ -206,4 +281,34 @@ body {
 
 .cast-card p {
   text-align: center;
+}
+
+/* Pagination-part */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 10px 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+  background-color: #ffcc00;
+  color: black;
+  font-weight: bold;
+}
+
+.pagination button:hover {
+  background-color: #444;
 }
